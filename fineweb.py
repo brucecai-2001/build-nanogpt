@@ -8,6 +8,7 @@ Will save shards to the local directory "edu_fineweb10B".
 """
 
 import os
+os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 import multiprocessing as mp
 import numpy as np
 import tiktoken
@@ -15,7 +16,7 @@ from datasets import load_dataset # pip install datasets
 from tqdm import tqdm # pip install tqdm
 
 # ------------------------------------------
-local_dir = "edu_fineweb10B"
+local_dir = "/root/autodl-tmp/edu_fineweb10B"
 remote_name = "sample-10BT"
 shard_size = int(1e8) # 100M tokens per shard, total of 100 shards
 
