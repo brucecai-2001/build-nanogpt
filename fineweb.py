@@ -9,6 +9,8 @@ Will save shards to the local directory "edu_fineweb10B".
 
 import os
 os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
+os.environ['HF_HOME'] = '/root/autodl-tmp/cache/'
+
 import multiprocessing as mp
 import numpy as np
 import tiktoken
